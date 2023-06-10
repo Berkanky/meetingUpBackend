@@ -402,7 +402,7 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(bodyParser.json()) */
 
 
-//event advice list crud operations
+//event advice list CRUD
 
 app.delete('/bbc/eventlists/:currentEventId/:currentUserId/:selectedUserId/removeFromAdviceList',async (req,res)=>{
     const {currentEventId,currentUserId,selectedUserId} = req.params
