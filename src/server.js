@@ -386,21 +386,28 @@ const notifyListSchema = new mongoose.Schema({
 const NotifyList = mongoose.model('NotifyList',notifyListSchema)
 module.exports = NotifyList
 
+app.use(cors({
+  origin: '*'
+}));
+
+app.use(express.json({ limit: '100mb' }));
+
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
+
 
 /* app.use(cors({
   origin:'http://localhost:9000'
 }))
 app.use(express.json({ limit: '150mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
-app.use(bodyParser.json())    */
-
- app.use(cors({
-  origin:'https://huddlehub.herokuapp.com'
+app.use(bodyParser.json())  
+ */
+/* app.use(cors({
+  origin:'https://newapp-eb613.firebaseapp.com'
 }))
 app.use(express.json({ limit: '150mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
-app.use(bodyParser.json())   
-
+app.use(bodyParser.json())   */  
 
 //event advice list CRUD
 
@@ -1724,14 +1731,15 @@ app.post('/bbc/users/', async (req, res) => {
   }
 });
 
-User.watch((err,results) =>{
+/* User.watch((err,results) =>{
   if(err){
     console.log(err)
   }else{
     console.log(results)
   }
-})
+}) */
 
+/* app.set('url','https://newapp-eb613.firebaseapp.com'); */
 
 app.listen(8000,() => {
     console.log('server running')
