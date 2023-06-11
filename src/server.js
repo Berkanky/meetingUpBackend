@@ -1,8 +1,8 @@
-import express from 'express'
-import bodyParser from 'body-parser'
-import mongoose from 'mongoose';
-import cors from "cors"
-import nodemailer from 'nodemailer'
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const nodemailer = require('nodemailer');
 const app = express()
 mongoose.connect("mongodb://localhost:27017/bbc",{useNewUrlParser:true,useUnifiedTopology:true})
 
