@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node src/server.cjs",
-    "dev": "nodemon --exec babel-node src/server.cjs",
+    "start": "babel-node src/server.js",
+    "dev": "nodemon --exec babel-node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "type": "module",
+  "type": "commonjs",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",

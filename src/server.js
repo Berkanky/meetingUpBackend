@@ -386,20 +386,20 @@ const notifyListSchema = new mongoose.Schema({
 const NotifyList = mongoose.model('NotifyList',notifyListSchema)
 module.exports = NotifyList
 
-
-/* app.use(cors({
+/* 
+app.use(cors({
   origin:'http://localhost:9000'
 }))
 app.use(express.json({ limit: '150mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
-app.use(bodyParser.json())  */
+app.use(bodyParser.json())   */
 
 app.use(cors({
   origin:'https://huddlehub.herokuapp.com'
 }))
 app.use(express.json({ limit: '150mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
-app.use(bodyParser.json()) 
+app.use(bodyParser.json())  
 
 
 //event advice list CRUD
